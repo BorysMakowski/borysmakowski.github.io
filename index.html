@@ -90,16 +90,31 @@
 			}
 
 		</script>
-		<script type="module">
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "https://threejs.org/build/three.module.js",
+					"three/PointerLockControls": "https://threejs.org/examples/jsm/controls/PointerLockControls.js",
+					"three/EffectComposer": "https://threejs.org/examples/jsm/postprocessing/EffectComposer.js",
+					"three/RenderPass": "https://threejs.org/examples/jsm/postprocessing/RenderPass.js",
+					"three/ShaderPass": "https://threejs.org/examples/jsm/postprocessing/ShaderPass.js",
+					"three/UnrealBloomPass": "https://threejs.org/examples/jsm/postprocessing/UnrealBloomPass.js"
+				}
+			}
+			</script>
+			
+			<script type="module">
+			import * as THREE from "three"
+			import { PointerLockControls } from "three/PointerLockControls"
+			import { EffectComposer } from "three/EffectComposer"
+			import { RenderPass } from "three/RenderPass"
+			import { ShaderPass } from "three/ShaderPass"
+			import { UnrealBloomPass } from "three/UnrealBloomPass"
 
-			import * as THREE from "https://threejs.org/build/three.module.js";
+	
 
-			import { PointerLockControls } from "https://threejs.org/examples/jsm/controls/PointerLockControls.js";
-            import { EffectComposer } from "https://threejs.org/examples/jsm/postprocessing/EffectComposer.js";
-            import { RenderPass } from "https://threejs.org/examples/jsm/postprocessing/RenderPass.js";
-			import { ShaderPass } from "https://threejs.org/examples/jsm/postprocessing/ShaderPass.js";
-			import { UnrealBloomPass } from "https://threejs.org/examples/jsm/postprocessing/UnrealBloomPass.js";
 
+		
 ///////////
             const ENTIRE_SCENE = 0, BLOOM_SCENE = 1;
             let object;
